@@ -50,8 +50,24 @@ span.click_here_beta, p.club_welcome_intro_text {
 #page_content, #article_image, #keep_in_touch, #newsletter_signup, #pull_quote, #call_to_action {
 	background: #fff;
 }
-
-
+.formtastic ol li.inline-fields label, .formtastic ol li.inline-fields input, .formtastic ol li.inline-fields select {
+  float: left;
+  clear: none;
+  margin-right: 10px;
+}
+.formtastic ol li.inline-fields label, .formtastic ol li.inline-fields .inline-errors {
+  margin-top: 10px;
+}
+.formtastic .inputs li.image img {
+  float: left;
+}
+.formtastic .inputs li.image input {
+  width: 180px;
+}
+/* This prevents google map marker's widths messing up because of 1140.css */
+.map_canvas img {
+  max-width: none;
+}
 
 /* =============================  general styles ============================= */
 ul.sitemap {
