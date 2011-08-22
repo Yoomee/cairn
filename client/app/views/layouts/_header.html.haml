@@ -6,8 +6,12 @@
       %h1#site_logo
         =link_to "#{site_name}", root_path, :id=>"site_logo_link"
     -else
-      =link_to "#{site_name}", root_path, :id=>"site_logo_link"
+      =link_to "#{site_name}", root_path, :id=>"site_logo_link"  
   #header_right.ninecol.last 
+    #right_company_info
+      %h2 Partnership Innovation Excellence
+      %p
+        Cairn is a professional health, safety and environmental consultancy comprising a team of specialists who lead the way in environmental monitoring, products and training for safer healthcare facilities.
     -if logged_in?
       .panel
         .logged_in_as
@@ -17,10 +21,6 @@
           =#link_to('My profile', @logged_in_member, :class=>'profile_link')
           =link_if_allowed('Admin', admin_proc)
           
-    -else
-      =link_to "Login", "#login_popup", :id=>'login_link', :class=>"button"
-      =link_to("Signup", new_member_path, :class => 'button')
-
     -if logged_in?
       .logged_in_box
         -link_to @logged_in_member, :class=>'my_profile_link' do

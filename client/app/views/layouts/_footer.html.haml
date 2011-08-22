@@ -18,6 +18,9 @@
           =link_to("another link", "#")
         %li
           =link_to("Site map", "/sections") 
+        -unless logged_in?  
+          %li
+            =link_to "Login", "#login_popup", :id=>'login_link', :class=>"button"
                
     =link_to("site by <span>Yoomee</span>", "http://www.yoomee.com", :id => "siteby")
       
