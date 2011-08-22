@@ -4051,7 +4051,7 @@ div.page_share {
 
 /* ====================  Related Content ===================== */
 
-#related_content {
+.related_content {
 	float: left;
 	clear: both;
 	width: 100%;
@@ -4060,26 +4060,26 @@ div.page_share {
 	padding-top: 10px;
 }
 
-#related_content h2{
+.related_content h2{
   margin: 10px 0 10px 0;
 	font-size: 20px;
 }
-#related_content ul {
+.related_content ul {
 	float: left;
 	margin: 0;
 }
-#related_content h3 a {
+.related_content h3 a {
 	color: #000;
 
 }
-#related_content ul li{
+.related_content ul li{
 	float:left;
 	list-style:none outside none;
   margin: 0px 20px 10px 0px;
  	width:155px;
 	display: block;
 }
-#related_content ul li.item_left {
+.related_content ul li.item_left {
   margin-left: 0;
 }
 .item_image {
@@ -4095,7 +4095,7 @@ div.page_share {
 	float: left;
 
 }
-#related_content a.more_link {
+.related_content a.more_link {
 	display: none;
 }
 .item_info p {
@@ -4105,16 +4105,16 @@ div.page_share {
 	font-size: 15px;
 	line-height: 15px;	
 }
-#related_content .item_image {
+.related_content .item_image {
 
 	margin: 0 0px 0 0;
 }
-#related_content .item_image img {}
-#related_content .item_info {
+.related_content .item_image img {}
+.related_content .item_info {
 	width: 100%;
 	font-size: 12px;
 }
-#related_content .item_info h3 {
+.related_content .item_info h3 {
 	margin: 6px 0 8px;
 	font-size: 16px;
 	line-height: 100%;
@@ -6339,4 +6339,22 @@ table#delegates th{
 }
 
 
+/*========== Page tags ==========*/
 
+ul.facelist-selections {
+	margin: 0;
+	width: 480px;
+	padding-bottom: 0px;
+}
+ul.facelist-selections li {
+	clear: none;
+}
+ul.facelist-selections li.facelist-original input {
+	background:none;
+	width: 160px;
+}
+
+input#as-input-themes {
+	margin: 0;
+	
+}

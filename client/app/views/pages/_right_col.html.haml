@@ -5,7 +5,13 @@
       =snippet(page, :photo_caption)
   =snippet(page, :pull_quote)  
   =snippet(page, :call_to_action)    
- 
+
+  -if page.has_related_items?(:included_types => %w{Document})
+    .related_content
+      %h2.title Related documents
+      -page.related_documents.each do |document|
+        =render 'documents/document', :document => document
+      
 -if false  
   %h2 Share
   %ul
