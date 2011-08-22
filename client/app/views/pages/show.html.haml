@@ -17,12 +17,12 @@
 
   #page_right_col
     =render "pages/right_col", :page => @page
-  -if @page.has_related_items?
-    #related_content.row
+    
+  -if @page.has_related_items?(:excluded_types => %w{Document})
+    .related_content.row
       .twelvecol
-        -if false
-          %h2.title Related content
-      =render_related_items(@page, :limit => 30, :truncate_length => 150)
+        %h2.title Related content
+        =render_related_items(@page, :limit => 30, :truncate_length => 150, :exclude_types => %w{Document})
   .page_share
     %h2 Share this
     #twitter_link.share_button
@@ -33,7 +33,6 @@
 .row        
   -options_panel do
     =back_link
-    ="Tagged #{in_tags(@page)}" unless @page.tags.empty?
     =link_if_allowed 'Edit section', edit_section_proc(@page.section)
     =link_if_allowed 'Add page', new_section_page_proc(@page.section)
     =link_if_allowed 'Edit page', edit_page_proc(@page)

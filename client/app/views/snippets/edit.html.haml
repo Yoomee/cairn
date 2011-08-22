@@ -1,0 +1,9 @@
+-title "Edit #{@snippet.human_name}"
+-semantic_form_for(@snippet) do |form|
+  -form.inputs do
+    =form.input :text
+  -form.buttons do
+    =form.submit 'Save'
+    
+-options_panel do
+  =back_link

@@ -11,7 +11,8 @@
     #right_company_info
       %h2 Partnership Innovation Excellence
       %p
-        Cairn is a professional health, safety and environmental consultancy comprising a team of specialists who lead the way in environmental monitoring, products and training for safer healthcare facilities.
+        =strip_tags(site_snippet(:header_text))
+        =link_if_allowed('Edit', edit_snippet_proc(Snippet.site_snippet(:header_text)), :class => 'edit_snippet_link')
     -if logged_in?
       .panel
         .logged_in_as
