@@ -218,6 +218,7 @@ td, th {
 p#notice {
 	text-align: center;
 	background: #faf2ad;
+	color: #000;
 	padding: 10px 0;
 	font-size: 14px;
 	margin: 0;
@@ -1527,7 +1528,7 @@ ul.subnav li.active a {
 	margin: 0px 0 20px 0;
 	float: left;
 	width: 900px;
-	background: #e6e6e6;
+	background:#DEE2E6;
 }
 ul.subnav li a {
 	display:block;
@@ -1627,7 +1628,7 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 #home_box_3 .home_box_image {
 	background: url(/images/home_box_image_3.jpg);
 }
-#home_box_2 {
+#home_box_1 {
 	background: #7170b3;
 }
 #home_box_3 {
@@ -1669,7 +1670,7 @@ a.home_box_link {
 	
 	
 }
-#home_box_2 a.home_box_link {
+#home_box_1 a.home_box_link {
 	background: url(/images/home_box_link_2.png);
 	
 }
