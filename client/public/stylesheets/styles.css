@@ -454,9 +454,7 @@ input:focus, textarea:focus {
 	-0-box-shadow:inset 1px 1px 5px #f5f5f5;
 	box-shadow:inset 1px 1px 5px #f5f5f5;
 }
-#new_enquiry input, #new_enquiry textarea, #new_enquiry input select {
-	width: 100%;	
-}
+
 body .formtastic input[type="radio"], body .formtastic input[type="checkbox"] {
 	border: none;
 	background: none;
@@ -1725,7 +1723,7 @@ a.latest_blog_item_title {
 div.latest_tweet {
 	padding-left: 100px;
 	background: url(/images/twitter.png) no-repeat;
-	
+	float:left;
 }
 
 p.tweet {
@@ -1737,6 +1735,10 @@ p.tweet {
 	
 }
 
+p.follow_us{
+  float:left;
+  clear:both;
+}
 
 
 #homepage_call_to_action {
@@ -6512,6 +6514,37 @@ a.department_function_link {
   font-size:14px;
 }
 
+
+/*========== Customer feedback form ==========*/
+fieldset.box {
+	padding:10px;
+	border:1px solid black;
+}
+
+fieldset.box > legend{
+	font-weight:bold;
+	font-size:17px;
+}
+
+fieldset.box label{
+	font-size:15px;
+	width:500px;
+}
+
+.check_boxes fieldset legend, .radio fieldset legend{
+  float:left;
+}
+
+.check_boxes li label, .radio li label{
+  font-weight:normal;
+}
+.formtastic .check_boxes ol li, .formtastic .radio ol li{
+  margin:0px 0px 0px 5px;
+}
+
+.formtastic .check_boxes ol li input, .formtastic .radio ol li input{
+  margin-bottom:5px;
+}
 
 
 

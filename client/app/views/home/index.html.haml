@@ -42,16 +42,14 @@
     =link_to_slug("More", :slug, :class=>"home_box_link")  
   #latest_blog.sixcol
     %h2 Latest from the blog
-    .latest_blog_item
-      =link_to "News title", "#", :class=>"latest_blog_item_title"
-      %p Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci.
-    .latest_blog_item
-      =link_to "News title", "#", :class=>"latest_blog_item_title"
-      %p Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci.   
+    -@blog_posts.each do |page|
+      .latest_blog_item
+        =link_to_self(page, :class=>"latest_blog_item_title")
+        %p=(snippet(page, :summary).nil? ? truncate(page.text.strip_tags, :length => 193) : snippet(page, :summary, false).strip_tags)
   #latest_tweet_col.sixcol.last
     %h2 Latest from Twitter
     .latest_tweet
-      %p.tweet We have a new addition to our sales team today! Look out for Alison who will be working on specialist products and services for hospitals.
+      %p.tweet=highlight_tweet_links(@latest_tweet)
       %p.follow_us
         Follow us
         =link_to "@cairntechnology", "http://twitter.com/cairntechnology"

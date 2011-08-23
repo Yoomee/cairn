@@ -3,17 +3,4 @@
     %li#nav_link_1
       =link_to "Home", "/"
     -Section.root.each do |section|
-      =li_with_active(current_section?(section), link_to_self(section))
-    -if false
-      %li#nav_link_2
-        =link_to_slug('Care homes', :about)
-      %li#nav_link_3
-        =link_to_slug('Hospitals', :our_work)
-      %li#nav_link_4
-        =link_to_slug('Other industries', :our_work)      
-      %li#nav_link_5
-        =link_to_slug('About us', :our_work)
-      %li#nav_link_6
-        =link_to_slug('Blog', :our_work)
-      %li#nav_link_7
-        =link_to_slug('Contact us', :our_work)
+      =li_with_active(current_root_section?(section), link_to_self(section))
