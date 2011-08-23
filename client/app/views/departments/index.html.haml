@@ -1,0 +1,9 @@
+-title "Edit departments"
+-no_content_row
+.row
+  .eightcol#departments_list
+    %p.department_help
+      To create a new department, type it's name into the "Departments" field of a product:
+      =image_tag("department_help.png")
+    -@departments.each do |department|
+      =render 'departments/department', :department => department, :show_form => false

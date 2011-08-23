@@ -12,7 +12,7 @@
     =#fields.input :intro, :input_html => {:rows => 5, :cols => 97} # summary snippet id used instead
     =fields.input :text, :as => :ck_text
     %li
-      %label Tags
+      %label Departments
     %li.text
       =text_field_tag :tags_text, "", :onkeypress => "return event.keyCode!=13"
     %li=fields.photo_browser_button :photo

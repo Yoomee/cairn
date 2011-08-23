@@ -6357,3 +6357,161 @@ input#as-input-themes {
 	margin: 0;
 	
 }
+
+
+/*========== Products ==========*/
+#departments_list{
+  list-style:none;
+}
+
+#departments_list .department {
+  margin-left:0px;
+  font-size:14px;
+  cursor:pointer;
+  padding:5px 10px;
+  color:#009BA6;
+}
+
+#departments_list .department:hover {
+  text-decoration:underline;
+}
+
+#departments_list .active {
+  background:#009BA6;
+  color:white;
+  cursor:default;
+}
+
+#departments_list .active:hover {
+  text-decoration:none;
+}
+
+
+/* ==================  Department Lists ==================== */
+
+#departments_list .department_wrapper {
+	border-bottom:1px solid gray;
+	clear:both;
+	height:37px;
+	margin-bottom:5px;
+}
+
+#departments_list .department_wrapper ol li {
+	clear:none;
+}
+
+.department_wrapper h3 a {
+	color: black;
+}
+
+#departments_list .edit_department_form .department_name_input {
+	width: 240px;
+	float:left;
+	font-weight: bold;
+	font-size:21px;
+	padding:2px;
+	margin-bottom: 9px;
+}
+
+#departments_list li.error .department_name_input {
+	padding:1px;
+}
+
+#departments_list .edit_department_form .department_color_input {
+	width: 50px;
+	float:left;
+}
+
+.edit_department_form {
+	float:left;
+	clear:none;
+}
+
+.edit_department_form p.inline-errors {
+	float:left;
+	font-size:15px;
+	line-height:15px;
+	margin:7px 0 0 5px;
+}
+
+.edit_department_form fieldset.inputs, .edit_department_form ol li{
+	margin-bottom:0;
+	float:left;
+}
+
+.edit_department_form .buttons{
+	display:none;
+	margin-bottom:0;
+}
+
+
+a#new_department_link {
+	text-decoration: underline;
+	font-size: 16px;
+}
+
+a.department_function_link {
+	float:right;
+	clear:none;	
+	padding: 5px;
+}
+
+.ajax_department_form_loader{
+	background-color:#DFDFDF;
+	clear:none;
+	float:left;
+	height:12px;
+	padding:7px 0 13px 143px;
+	width:357px;
+}
+
+.department_display{
+	float:left;
+	clear:none;
+}
+
+.department_display h3{
+	clear:none;
+	float:left;
+	margin:0 0 9px;
+	padding:1px 0 0 4px;
+}
+.department_display .color_block{
+	border:2px solid;
+	clear:none;
+	float:left;
+	height:22px;
+	margin:2px 5px 0 0;
+	width:41px;
+}
+.department_active_form {
+  float: right;
+  margin-left: 10px;  
+}
+.department_active_form fieldset, .department_active_form ol, .department_active_form li {
+  margin: 0;
+}
+.department_active_form label {
+  background-color: #ccc;
+  padding: 5px 5px;
+  font-weight: normal;
+  font-size: 13px;
+  width: 70px;
+  text-align: center;  
+}
+.department_active_form li.department_inactive label {
+  background: none;
+}
+.department_active_form label input {
+  margin: 0;
+  float: none;
+}
+
+#departments_list p.department_help {
+  font-size:14px;
+}
+
+
+
+
+
