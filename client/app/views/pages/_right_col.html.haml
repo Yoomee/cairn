@@ -1,6 +1,10 @@
 #page_snippets.fivecol.last
   -if page.has_photo?
-    #article_image
+    #article_image.corner_container
+      .c1.corner
+      .c2.corner
+      .c3.corner
+      .c4.corner
       =photo_for(page, '450x')  
       =snippet(page, :photo_caption)
   =snippet(page, :pull_quote)  

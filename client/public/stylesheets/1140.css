@@ -13,12 +13,12 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
 /* ==================================================================================================================== */
 
 .container {
-padding-left: 20px;
-padding-right: 20px;
+padding-left: 10px;
+padding-right: 10px;
 }
 
 .row {
-width: 940px;
+width: 955px;
 margin: 0 auto;
 display: block;
 overflow: hidden;
@@ -40,61 +40,62 @@ overflow: hidden;
 
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
-margin-right: 20px;
+margin-right: 5px;
 float: left;
 min-height: 1px;
-padding:0;
+padding:10px;
 
 
 }
 .row .onecol {
-width: 60px;
+width: 55px;
 }
 
 .row .twocol {
-width: 140px;
+width: 145px;
 }
 
 .row .threecol {
-width: 220px;
+width: 215px;
 }
 
 .row .fourcol {
-width: 300px;
+width: 295px;
 }
 
 .row .fivecol {
-width: 380px;
+width: 375px;
 }
 
 
 .row .sixcol {
-width: 460px;
+width: 455px;
 }
 
 .row .sevencol {
-width: 540px;
+width: 535px;
 }
 
 .row .eightcol {
-width: 620px;
+width: 615px;
 }
 
 .row .ninecol {
-width: 700px;
+width: 695px;
 }
 
 .row .tencol {
-width: 780px;
+width: 775px;
 }
 
 .row .elevencol {
-width: 860px;
+width: 855px;
 }
 
 .row .twelvecol {
-width: 940px;
+width: 935px;
 float: left;
+padding:0 10px;
 }
 
 .last {

@@ -11,7 +11,12 @@
     .index_item.threecol{:class => "index_#{col_name}"}
       .index_img
         -if page_section.has_photo?
-          =link_to(photo_for(page_section, '210x135#'), page_section)
+          .corner_container
+            .c1.corner
+            .c2.corner
+            .c3.corner
+            .c4.corner
+            =link_to(photo_for(page_section, '210x135#'), page_section)
       .index_content  
         %h2.index_title
           =link_to_self(page_section,:class=>'newsbox_title_link')
