@@ -121,9 +121,11 @@ a:hover {
 .hide {
 	visibility:hidden;
 }
-
+html body .no_padding {
+	padding: 0;
+}
 #header_right {
-	margin-top: 20px;
+	margin-top: 0px;
 
 	position: relative;
 	
@@ -132,7 +134,7 @@ a:hover {
 #right_company_info {
 	float: right;
 	width: 270px;
-	margin: 10px 20px 0 0;
+	margin: 30px 20px 0 0;
 	
 }
 #right_company_info h2 {
@@ -144,7 +146,7 @@ a:hover {
 #right_company_info p {
 	font-family: droid serif;
 	font-style: italic;
-	font-size: 11px;
+	font-size: 12px;
 	color: #999;
 }
 #header_right a.button {
@@ -1352,7 +1354,7 @@ fb.fb_login_not_logged_in.FB_login_button {
 	float: right;	
 }
 #search_box {
-	margin: 12px 20px 0 0;
+	margin: 12px 15px 0 0;
 	padding: 5px 0;
 	color: #666;
 	width: 190px;
@@ -1422,6 +1424,7 @@ input#search_icon {
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	clear: left;
 	position: relative;
+
 	z-index: 3;
 	
 	background: #ee2374;
@@ -1430,7 +1433,9 @@ input#search_icon {
 	-webkit-box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px rgba(255, 62, 124, 0.740);
 	-moz-box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px rgba(255, 62, 124, 0.740);
 }
-
+#nav_line .ninecol {
+	padding: 0;
+}
 #subnav {
   clear: both;
   float: left;
@@ -1489,7 +1494,7 @@ input#search_icon {
 	font-weight: bold;
 }
 #nav a:hover {
-	background: #c21d5f;
+	background: #df1d67;
 	text-decoration: none;
 	
 	 -webkit-transition: .3s ease-in;
@@ -1501,7 +1506,7 @@ input#search_icon {
   text-decoration:none;
   font-weight: bold;
 
-  background: #c21d5f;
+  background: #bf1d5e;
 }
 
 #page_subnav ul li.active a {
@@ -1527,7 +1532,7 @@ ul.subnav li.active a {
 	padding: 20px 20px 10px;
 	margin: 0px 0 20px 0;
 	float: left;
-	width: 900px;
+	width: 895px;
 	background:#DEE2E6;
 }
 ul.subnav li a {
@@ -1577,6 +1582,7 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 	background: #455562;
 	color: #fff;
 	padding: 50px 0 0 0;
+	width: 955px;
 	
 	
 	
@@ -1586,6 +1592,7 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 	background: url(/images/big_message_slide.jpg) no-repeat bottom right;
 	height: 280px;
 	float: right;
+	padding: 0;
 	
 	
      -moz-border-radius-bottomright:10px;
@@ -1596,8 +1603,8 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 }
 #big_message_left {
 	float: left;
+	padding: 15px;
 	width: 360px;
-	margin: 20px;
 }
 #big_message_left p {
 	font-family: droid serif, arial, sans serif;
@@ -1614,10 +1621,19 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 	position: relative;
 	z-index: 1;
 }
-.home_box {
+.row .home_box {
 	margin-bottom: 30px;
 	background: #ee2374;
+	padding: 0;
+	width: 301px;
 	
+}
+#home_box_1, #home_box_2 {
+	margin-right: 25px;
+}
+
+body div.home_box_1, div.home_box_2 {
+	margin-right: 25px;
 }
 #home_box_1 .home_box_image {
 	background: url(/images/home_box_image_1.jpg);
@@ -3788,7 +3804,43 @@ a.backto {
 
 
 }
-
+.corner_container {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0;
+}
+.corner_container * {
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+.corner {
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: url(/images/corner.png) no-repeat 0 0;
+	position: absolute;
+}
+.c1 {
+	top: 0;
+	left: 0;
+}
+.c2 {
+	top:0;
+	right:0;
+	background-position: top right;
+}
+.c3 {
+	bottom: 0;
+	left: 0;
+	background-position: bottom left;
+}
+.c4 {
+	bottom:0;
+	right:0;
+	background-position: bottom right;	
+}
 #article_image {
 	float:left;
 	
