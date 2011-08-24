@@ -303,7 +303,7 @@ ul.lst li{
 }
 /* =============================  button styles ============================= */
 /* general large button*/
-input[type="submit"], a.bttn_l, .formtastic input[type="submit"], .formtastic  a.bttn_l {
+input[type="submit"], a.bttn_l, .formtastic input[type="submit"], .formtastic  a.bttn_l, a.download_text {
 	background: #e2e2e2 url(/images/chrome.png) repeat-x 0 0px;
 	border:none;
 	font-family:helvetica, arial, sans-serif;
@@ -4109,9 +4109,9 @@ div.page_share {
 	float: left;
 	clear: both;
 	width: 100%;
-	border-top: 2px solid #f5f5f5;
+
 	margin-top: 20px;
-	padding-top: 10px;
+	padding-top: 0px;
 }
 
 .related_content h2{
@@ -4172,6 +4172,28 @@ div.page_share {
 	margin: 6px 0 8px;
 	font-size: 16px;
 	line-height: 100%;
+}
+
+div.doc_icon {
+	float: left;
+	margin: 0 10px 0 0;
+	
+}
+.doc h4 a {
+	font-size: 13px;
+	font-weight: normal;
+	float: left;
+	width: 310px;
+	color: #415462;
+}
+
+a.download_text {
+	display: block;
+	float: left;
+	font-size: 11px;
+	padding: 3px 10px;
+	
+	
 }
 
 
