@@ -18,7 +18,7 @@
           .hidden_doc_wrapper=render 'documents/document', :document => document
         -else
           =render 'documents/document', :document => document
-      =link_to_function("&darr; Show all", "$('.hidden_doc_wrapper').show()", :class => "show_documents_link")
+      =link_to_function("&darr; Show all", "$('.hidden_doc_wrapper').show();$(this).hide()", :class => "show_documents_link") if page.related_documents.size > 3
   .page_share
     %h2 Share this
     #twitter_link.share_button
