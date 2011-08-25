@@ -1,27 +1,47 @@
 #footer.container
   .row
+    #footer_contact.sixcol
+      %h2 Contact us
+      .contact_one
+        %p
+          Cairn Technology Ltd
+          %br
+          G4 Business Centre
+          %br
+          19-21 Carlisle Street East
+          %br
+          Sheffield S4 7QN              
+        =link_to "Twitter", "http://twitter.com/cairntechnology", :class=>"footer_social_media footer_twitter", :target=>"_blank"
+        =link_to "Facebook", "http://www.facebook.com/pages/Cairn-Technology-Ltd/168823066504257?sk=info", :class=>"footer_social_media footer_facebook", :target=>"_blank"
+        =link_to "linkedin", "http://www.linkedin.com/groups?about=&gid=3052673&trk=anet_ug_grppro", :class=>"footer_social_media footer_linkedin", :target=>"_blank"
+      .contact_two  
+        %p
+          Phone: +44 (0)114 244 9551
+          %br
+          Fax: +44 (0)114 296 1005
+          %br
+          E-mail: 
+          =link_to "info@cairntechnology.com", "mailto:info@cairntechnology.com"  
     #footer_copyright.fourcol
       %p#copyright
         %strong
-          \&copy; 2011 
-          ="#{site_name}"
-    #footer_links.fourcol
+          \&copy; 2011 Cairn Technology Ltd 
+    #footer_links.sixcol
       %ul
-        - if admin_logged_in?
-          %li
-            -link_to(admin_path) do
-              %strong
-                admin
         %li
-          =link_to("legal", "#")
+          =link_to("Site map", "/sections")       
         %li
-          =link_to("another link", "#")
+          =link_to(" Terms and conditions", "#")
         %li
-          =link_to("Site map", "/sections") 
+          =link_to("Company information", "#")
+
         -unless logged_in?  
           %li
-            =link_to "Login", "#login_popup", :id=>'login_link', :class=>"button"
-               
+            =link_to "<strong>Login</strong>", "#login_popup", :id=>'login_link', :class=>"button"
+        - if admin_logged_in?
+          %li
+            =link_to('<strong>Logout</strong>', session_path, :method => :delete)         
+
     =link_to("site by <span>Yoomee</span>", "http://www.yoomee.com", :id => "siteby")
       
 

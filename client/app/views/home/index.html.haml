@@ -24,22 +24,25 @@
     #big_message_image.sevencol.last
   #home_box_2.home_box.fourcol
     .home_box_image
+      =link_to_slug("hospitals", :hospitals, :class=>"home_box_image_link")  
     %h2.home_box_title Interested in hospitals
     %p.home_box_text
       Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. 
-    =link_to_slug("More", :slug, :class=>"home_box_link")      
+    =link_to_slug("More", :hospitals, :class=>"home_box_link")      
   #home_box_1.home_box.fourcol
     .home_box_image
+      =link_to_slug("Care Homes", :care_homes, :class=>"home_box_image_link")
     %h2.home_box_title Interested in care homes
     %p.home_box_text
       Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. 
-    =link_to_slug("More", :slug, :class=>"home_box_link")
+    =link_to_slug("More", :care_homes, :class=>"home_box_link")
   #home_box_3.home_box.fourcol.last
     .home_box_image
+      =link_to_slug("other_industries", :other_industries, :class=>"home_box_image_link")
     %h2.home_box_title Other industries
     %p.home_box_text
       Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. 
-    =link_to_slug("More", :slug, :class=>"home_box_link")  
+    =link_to_slug("More", :other_industries, :class=>"home_box_link")  
   #latest_blog.sixcol
     %h2 Latest from the blog
     -@blog_posts.each do |page|
