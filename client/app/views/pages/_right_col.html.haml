@@ -11,14 +11,14 @@
   =snippet(page, :call_to_action)    
 
   -if page.has_related_items?(:included_types => %w{Document})
-    .related_content
+    .related_documents
       %h2.title Related documents
       -page.related_documents.each_with_index do |document, idx|
         -if idx > 2
           .hidden_doc_wrapper=render 'documents/document', :document => document
         -else
           =render 'documents/document', :document => document
-      =link_to_function("Show all", "$('.hidden_doc_wrapper').show()", :class => "show_documents_link")
+      =link_to_function("&darr; Show all", "$('.hidden_doc_wrapper').show()", :class => "show_documents_link")
   .page_share
     %h2 Share this
     #twitter_link.share_button
