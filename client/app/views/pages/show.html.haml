@@ -15,22 +15,14 @@
         %p#page_status=@page.status_string
       =render('pages/content', :page => @page)
     =render_slug(@page.slug)
+    -if @page.has_related_items?(:excluded_types => %w{Document})
+      .related_content.row
+        %h2.title Related content
+        =render_related_items(@page, :limit => 30, :truncate_length => 170, :exclude_types => %w{Document})
 
   #page_right_col
     =render "pages/right_col", :page => @page
-    
-  -if @page.has_related_items?(:excluded_types => %w{Document})
-    .related_content.row
-      .twelvecol
-        %h2.title Related content
-        =render_related_items(@page, :limit => 30, :truncate_length => 150, :exclude_types => %w{Document})
-  .page_share
-    %h2 Share this
-    #twitter_link.share_button
-      =link_to "Tweet", "http://twitter.com/share", :class=>"twitter-share-button", :data_count=>"horizontal", :data_via=>"yoomeehq"
-      =javascript_include_tag 'http://platform.twitter.com/widgets.js'
-    #facebook_link.share_button  
-      =facebook_like_link      
+
 .row        
   -options_panel do
     =back_link

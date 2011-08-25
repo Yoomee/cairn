@@ -8,12 +8,14 @@
 -no_content_row
 .row
   .twelvecol
-    =photo_for(@section, "140x") if @section.has_photo?
     -unless @section.description.nil?
       %p.section_description
         =@section.description
-.row
-  .twocol
+    %br.clear    
+#product_and_department_list.row
+  #departments_list_block.threecol
+    %p.departments_list_intro
+      Click on a department below to find products that are relevant to you.
     %ul#departments_list
       %li.department#dep_all.active
         All Departments
@@ -22,7 +24,7 @@
           =department
     =link_to("Edit departments", section_tags_path(@section))
         
-  .tencol.last
+  .eightcol.last
     #latestStoriesList
       -@pages_sections.each do |page_section|
         .item.product{:class => page_section.tags.collect{|t| "dep_#{t.to_s.downcase.fully_underscore}"}.join(' ')}

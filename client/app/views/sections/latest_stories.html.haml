@@ -6,6 +6,7 @@
     #section_description.twelvecol 
       %p.section_description
         =@section.description.strip_tags
+        
 #blog_like_news_view.row
   -@pages_sections.each_with_col_name do |page_section, col_name|
     .blog_like_news{:class => "item_#{col_name}"}

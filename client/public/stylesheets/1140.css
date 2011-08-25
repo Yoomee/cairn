@@ -21,7 +21,7 @@ padding-right: 10px;
 width: 955px;
 margin: 0 auto;
 display: block;
-overflow: hidden;
+overflow: visible;
 }
 
 
@@ -121,7 +121,7 @@ img {
 }
 
 
-/* Smaller screens */
+/*
 
 @media only screen and (max-width: 1023px) {
 
@@ -133,7 +133,7 @@ img {
 	}
 
 
-/* Mobile */
+
 
 @media handheld, only screen and (max-width: 767px) {
 
@@ -167,3 +167,4 @@ img {
   }
 
 }
+*/

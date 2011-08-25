@@ -1,0 +1,13 @@
+-current_idx = items.index(item)
+-pre = item == items.first ? nil : items[current_idx - 1]
+-nxt = item == items.last  ? nil : items[current_idx + 1]
+-parent = item.breadcrumb_parent
+
+
+#overflow_subnav
+  #overflow_previous
+    =link_to("Previous", pre, :title => pre) if pre
+  #overflow_all
+    =link_to("All", parent, :title => parent)
+  #overflow_next
+    =link_to("Next", nxt, :title => nxt) if nxt
