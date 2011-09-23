@@ -50,7 +50,7 @@ span.click_here_beta, p.club_welcome_intro_text {
 	font-family:'VAG Rounded W02 Thin', arial, sans-serif;
 }
 #page_left_col, #page_right_col, p.index_text, p.blog_like_news_text {
-	color: #666;
+	color: #555;
 }
 
 #page_content, #article_image, #keep_in_touch, #newsletter_signup, #pull_quote, #call_to_action {
@@ -181,20 +181,22 @@ html body .no_padding {
 
 #right_company_info {
 	float: right;
-	width: 270px;
-	margin: 30px 20px 0 0;
+	width: 300px;
+	margin: 30px 0px 0 0;
 	
 }
 #right_company_info h2 {
-	font-size: 12px;
+	font-size: 14px;
 	margin: 0 0 4px;
 	text-transform: uppercase;
 	word-spacing: 10px;
 }
 #right_company_info p {
-	font-family: droid serif;
+	font-family: georgia, serif;
 	font-style: italic;
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 6px 0  0;
 	color: #999;
 }
 #header_right a.button {
@@ -1405,7 +1407,7 @@ fb.fb_login_not_logged_in.FB_login_button {
 	float: right;	
 }
 #search_box {
-	margin: 12px 15px 0 0;
+	margin: 12px 12px 0 0;
 	height: 20px;
 	padding: 5px 0;
 	color: #666;
@@ -1539,7 +1541,7 @@ input#search_icon {
 	width: 20px;
 	height: 23px;
 	padding: 0;
-	margin: 15px 10px 15px 20px;
+	margin: 15px 5px 15px 17px;
 }
 #nav_link_2 a, #nav_link_3 a, #nav_link_4 a  {
 	font-size: 16px;
@@ -1721,7 +1723,7 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 	width: 360px;
 }
 #big_message_left p {
-	font-family: droid serif, arial, sans serif;
+	font-family: georgia, serif;
 	font-style: italic;
 	font-size: 16px;
 	color: rgba(255,255,255,0.7);
@@ -1867,7 +1869,7 @@ div.latest_tweet {
 
 p.tweet {
 	font-style:italic;
-	font-family: droid serif, arial, helvetica, sans-serif;
+	font-family: georgia, serif;
 	font-size: 16px;
 	float: left;
 	display: block;
@@ -2035,7 +2037,7 @@ h5.article_intro {
 	line-height: 150%;
 	font-size: 17px;
 	font-weight: normal;
-	color: #666;
+	color: #555;
 
 	
 }
@@ -2693,7 +2695,16 @@ div.stories_filter li {
 	position:relative;
 	background:;
 }
-
+span#iso_label {
+	display: block;
+	position: absolute;
+	
+	width: 91px;
+	height: 60px;
+	background: url(/images/iso.png) no-repeat 0 0;
+	right: 155px;
+	bottom: 30px;
+}
 div#footer.container {
 	background: #dadde0;
 	
@@ -2702,7 +2713,7 @@ div#footer.container {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	position: relative;
-	min-height: 200px;
+	min-height: 220px;
 }
 
 #footer_sitemap {
@@ -3885,7 +3896,7 @@ a.backto {
 
 
 #page_left_col, #page_right_col {
-	color: #666;
+	color: #555;
 	z-index: 30;
 
 
@@ -4041,11 +4052,10 @@ a.backto {
 .pull_quote {
 	margin: 30px 0 0;
 	float: left;
-	width: 87%;
+	width: 100%;
 	text-indent: 0;
-	background: url(/images/sprite.png) no-repeat -340px -120px;
 	font-size: 14px;
-	padding: 0 0 0 13%;
+	padding: 0 0 0 0;
 	
 	min-height: 45px;
 }
@@ -4079,11 +4089,11 @@ a.backto {
 	color: #fff;
 	
 	
-	background: #ee2374;
+	background: #009ba6;
 	
-	box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px rgba(255, 62, 124, 0.740);
-	-webkit-box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px rgba(255, 62, 124, 0.740);
-	-moz-box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px rgba(255, 62, 124, 0.740);
+	box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px #009ba6;
+	-webkit-box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px #009ba6;
+	-moz-box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px #009ba6;
 
 
 }
@@ -4377,6 +4387,9 @@ div.item_image_wrap {
 	margin: 20px 0 0;
 	position: relative;
 }
+.related_documents h2.title {
+	font-size: 16px;
+}
 .doc {
 	float: left;
 	width: 380px;
@@ -4389,6 +4402,7 @@ div.item_image_wrap {
 div.doc_icon {
 	float: left;
 	margin: 0 10px 0 0;
+	width: 40px;
 	
 }
 .doc h4 a {
@@ -4402,8 +4416,9 @@ div.doc_icon {
 a.download_text {
 	display: block;
 	float: left;
-	font-size: 11px;
-	padding: 3px 10px;
+	font-size: 10px;
+	padding: 2px 8px;
+	margin: 4px 0 0;
 	
 	
 }
