@@ -1780,6 +1780,7 @@ h2.home_box_title {
 	margin: 0 15px;
 	color: #fff;
 	color:rgba(255,255,255,0.8);
+	min-height: 115px;
 }
 a.home_box_link {
 	float: left;
