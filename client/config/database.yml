@@ -1,19 +1,19 @@
 development:
   username: root
   adapter: mysql
-  database: cairn3_development
+  database: cairn_development
   host: localhost
   password: ''
 test:
   username: root
   adapter: mysql
-  database: cairn3_test
+  database: cairn_test
   host: localhost
   password: ''
 production: 
   username: root
   adapter: mysql
-  database: cairn3_production
+  database: cairn_production
   host: localhost
   password: ''
 

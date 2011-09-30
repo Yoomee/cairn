@@ -1,0 +1,45 @@
+-content_for :head do
+  :javascript
+    $(document).ready(function() {
+      Products.init();  
+    });
+
+-@page_title = @section.name
+-no_content_row
+.row
+  .twelvecol
+    -unless @section.description.nil?
+      %p.section_description
+        =@section.description
+    %br.clear    
+#product_and_department_list.row
+  #departments_list_block.threecol
+    %p.departments_list_intro
+      Click on a department below to find products that are relevant to you.
+    %ul#departments_list
+      %li.department#dep_all.active
+        All Departments
+      -@departments.each do |department|
+        %li.department{:id => "dep_#{department.to_s.downcase.fully_underscore}"}
+          =department
+    =link_to("Edit departments", section_tags_path(@section))
+        
+  .eightcol.last
+    #latestStoriesList
+      -@pages_sections.each do |page_section|
+        .item.product{:class => page_section.tags.collect{|t| "dep_#{t.to_s.downcase.fully_underscore}"}.join(' ')}
+          .text
+            %h3=link_to page_section, page_section
+            %p=strip_tags description_for(page_section, :length => 230)
+          =link_to(photo_for(page_section, "140x140#"), page_section, :class => 'item_img')
+          =link_to 'More', page_section, :class => 'bttn'
+          
+.row
+  .twelvecol      
+    -options_panel do
+      =back_link
+      =link_if_allowed 'Edit section', edit_section_proc(@section)
+      =link_if_allowed 'Delete section', @section, :method => :delete, :confirm => "Are you sure you want to delete this section? (its subsections and pages will also be deleted)"
+      =link_if_allowed "New subsection", new_section_section_proc(@section)
+      =link_if_allowed "Reorder pages", order_section_proc(@section)
+      =link_if_allowed 'New page', new_section_page_proc(@section)

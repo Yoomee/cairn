@@ -13,15 +13,18 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
 /* ==================================================================================================================== */
 
 .container {
-padding-left: 20px;
-padding-right: 20px;
+padding-left: 10px;
+padding-right: 10px;
 }
 
 .row {
-width: 940px;
+width: 955px;
 margin: 0 auto;
-overflow: hidden;
+display: block;
+overflow: visible;
 }
+
+
 
 /* replace above to have fluid grids */
 /*
@@ -37,61 +40,62 @@ overflow: hidden;
 
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
-margin-right: 3.8%;
+margin-right: 5px;
 float: left;
 min-height: 1px;
-padding:0;
+padding:10px;
 
 
 }
 .row .onecol {
-width: 4.85%;
+width: 55px;
 }
 
 .row .twocol {
-width: 13.45%;
+width: 145px;
 }
 
 .row .threecol {
-width: 22.05%;
+width: 215px;
 }
 
 .row .fourcol {
-width: 30.75%;
+width: 295px;
 }
 
 .row .fivecol {
-width: 39.45%;
+width: 375px;
 }
 
 
 .row .sixcol {
-width: 48%;
+width: 455px;
 }
 
 .row .sevencol {
-width: 56.75%;
+width: 535px;
 }
 
 .row .eightcol {
-width: 65.4%;
+width: 615px;
 }
 
 .row .ninecol {
-width: 74.05%;
+width: 695px;
 }
 
 .row .tencol {
-width: 82.7%;
+width: 775px;
 }
 
 .row .elevencol {
-width: 91.35%;
+width: 855px;
 }
 
 .row .twelvecol {
-width: 100%;
+width: 935px;
 float: left;
+padding:0 10px;
 }
 
 .last {
@@ -117,7 +121,7 @@ img {
 }
 
 
-/* Smaller screens */
+/*
 
 @media only screen and (max-width: 1023px) {
 
@@ -129,7 +133,7 @@ img {
 	}
 
 
-/* Mobile */
+
 
 @media handheld, only screen and (max-width: 767px) {
 
@@ -163,3 +167,4 @@ img {
   }
 
 }
+*/

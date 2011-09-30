@@ -1,16 +1,22 @@
 -@page_title = @section.name
+-meta_tags(:description => @section.snippet_text(:meta_description))
 -no_content_row
 -unless @section.description.nil?
   .row
     #section_description.twelvecol 
       %p.section_description
-        =@section.description.strip_tags
+        =@section.description
 #index_view.row      
   -@pages_sections.each_with_col_name(4) do |page_section, col_name|
     .index_item.threecol{:class => "index_#{col_name}"}
       .index_img
         -if page_section.has_photo?
-          =link_to(photo_for(page_section, '210x135#'), page_section)
+          .corner_container
+            .c1.corner
+            .c2.corner
+            .c3.corner
+            .c4.corner
+            =link_to(photo_for(page_section, '210x135#'), page_section)
       .index_content  
         %h2.index_title
           =link_to_self(page_section,:class=>'newsbox_title_link')
@@ -18,8 +24,8 @@
           %p.index_date
             =(page_section.is_a?(Page) ? page_section.publish_on : page_section.created_at).strftime("%e %B %Y")  
         %p.index_text
-          =page_section.is_a?(Page) ? (snippet(page_section, :summary).nil? ? truncate(page_section.text.strip_tags, :length => 193) : snippet(page_section, :summary, false).strip_tags) : page_section.description.to_s.strip_tags
-          =link_to "Read more", page_section, :class=>'blog_read_more'
+          =page_section.is_a?(Page) ? (snippet(page_section, :summary).nil? ? truncate(page_section.text.strip_tags, :length => 183) : snippet(page_section, :summary, false).strip_tags) : page_section.description.to_s.strip_tags.word_truncate(183)
+        =link_to "Read more", page_section, :class=>'section_read_more'
         %p.index_read_more
           
 .row
@@ -29,4 +35,5 @@
     =link_if_allowed 'Edit section', edit_section_proc(@section)
     =link_if_allowed 'Delete', @section, :method => :delete, :confirm => "Are you sure you want to delete this section? (its subsections and pages will also be deleted)"
     =link_if_allowed "New subsection", new_section_section_proc(@section)
+    =link_if_allowed "Reorder pages", order_section_proc(@section)
     =link_if_allowed 'New page', new_section_page_proc(@section)

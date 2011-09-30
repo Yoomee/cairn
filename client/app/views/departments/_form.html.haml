@@ -1,0 +1,8 @@
+-unique_id = department.id.to_s
+-semantic_remote_form_for department, :loading => "DepartmentForm.loading('#{unique_id}');", :complete => "DepartmentForm.complete('#{unique_id}');", :html => {:id => "#{unique_id}_department_form", :class => "edit_department_form",:style => "#{'display:none' unless show_form}"} do |form|
+  -form.inputs do
+    -if department.respond_to?(:color)
+      =form.input :color, :label => false, :input_html => {:class => "department_color_input", :id => "#{unique_id}_department_color_input"} 
+    =form.input :name, :label => false, :input_html => {:class => "department_name_input"}
+    -form.buttons do
+      =form.commit_button :button_html => {:id => "#{unique_id}_department_form_submit", :style => 'display:none'}

@@ -1,0 +1,11 @@
+.twelvecol
+  -if !overflow
+    %div{:id => "subnav_#{depth}", :class => "#{last ? 'last' : ''}"}
+      %ul.lst{:class => "subnav subnav_#{depth}"}
+        -section.subnav_children.each do |child|
+          -if %w{Page Section}.include?(child.class.to_s)
+            =li_with_active(viewing_page_or_section_tree?(child), link_to_self(child))
+          -else
+            =li_with_active(eval(child[2].to_s) || current_page?(child[1]), link_to(child[0], child[1]))
+  -else
+    =render("layouts/subnav_overflow", :item => @page.nil? ? @section : @page, :items => section.subnav_children)

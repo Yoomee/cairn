@@ -1,13 +1,18 @@
 .row
   #flash_message.twelvecol.no_padding
     =render_flash
-  .threecol
+  .threecol.no_padding
     -if is_home?
       %h1#site_logo
         =link_to "#{site_name}", root_path, :id=>"site_logo_link"
     -else
-      =link_to "#{site_name}", root_path, :id=>"site_logo_link"
-  #header_right.ninecol.last 
+      =link_to "#{site_name}", root_path, :id=>"site_logo_link"  
+  #header_right.ninecol.last.no_padding 
+    #right_company_info
+      %h2 Partnership Innovation Excellence
+      %p
+        =strip_tags(site_snippet(:header_text))
+        =link_if_allowed('Edit', edit_snippet_proc(Snippet.site_snippet(:header_text)), :class => 'edit_snippet_link')
     -if logged_in?
       .panel
         .logged_in_as
@@ -17,10 +22,6 @@
           =#link_to('My profile', @logged_in_member, :class=>'profile_link')
           =link_if_allowed('Admin', admin_proc)
           
-    -else
-      =link_to "Login", "#login_popup", :id=>'login_link', :class=>"button"
-      =link_to("Signup", new_member_path, :class => 'button')
-
     -if logged_in?
       .logged_in_box
         -link_to @logged_in_member, :class=>'my_profile_link' do

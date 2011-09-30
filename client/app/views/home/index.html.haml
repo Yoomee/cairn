@@ -12,22 +12,47 @@
       });
     });
 -no_content_row 
-.row
+-hide_page_title
+#home_index_row.row
   #big_message    
-    #big_message_left.fourcol
+    #big_message_left.fivecol
       %h2
         Welcome to Cairn
       %p
-        With the help of brilliant videos and inspiring stories from creative people and community members around the world. Join people from 205 countries doing their green things and making a difference. 
-        = link_to 'More about us here', {:controller => 'page', :action => 'show', :id => '2'}, :class => 'read_more'
-    #big_message_image.eightcol.last
-      =image_tag 'photo.jpg'
-  #home_info_1.fourcol
-    %h3 A title goes here
-    %p Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.  
-  #home_info_2.fourcol
-    %h3 Another title
-    %p Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.
-  .fourcol.last
-    =link_to 'Call to action here', '#', :id=>'homepage_call_to_action', :class=>'homepage_link'
-    =link_to 'Less important link', '#', :id=>'homepage_second_link', :class=>'homepage_link'
+        In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. 
+        =# link_to 'More about us here', {:controller => 'page', :action => 'show', :id => '2'}, :class => 'read_more'
+    #big_message_image.sevencol.last
+  #home_box_2.home_box.fourcol
+    .home_box_image
+      =link_to_slug("hospitals", :hospitals, :class=>"home_box_image_link")  
+    %h2.home_box_title Interested in hospitals
+    %p.home_box_text
+      Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. 
+    =link_to_slug("More", :hospitals, :class=>"home_box_link")      
+  #home_box_1.home_box.fourcol
+    .home_box_image
+      =link_to_slug("Care Homes", :care_homes, :class=>"home_box_image_link")
+    %h2.home_box_title Interested in care homes
+    %p.home_box_text
+      Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. 
+    =link_to_slug("More", :care_homes, :class=>"home_box_link")
+  #home_box_3.home_box.fourcol.last
+    .home_box_image
+      =link_to_slug("other_industries", :other_industries, :class=>"home_box_image_link")
+    %h2.home_box_title Other industries
+    %p.home_box_text
+      Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. 
+    =link_to_slug("More", :other_industries, :class=>"home_box_link")  
+  #latest_blog.sixcol
+    %h2 Latest from the blog
+    -@blog_posts.each do |page|
+      .latest_blog_item
+        =link_to_self(page, :class=>"latest_blog_item_title")
+        %p=(snippet(page, :summary).nil? ? truncate(page.text.strip_tags, :length => 193) : snippet(page, :summary, false).strip_tags)
+  #latest_tweet_col.sixcol.last
+    %h2 Latest from Twitter
+    .latest_tweet
+      %p.tweet=highlight_tweet_links(@latest_tweet)
+      %p.follow_us
+        Follow us
+        =link_to "@cairntechnology", "http://twitter.com/cairntechnology"
