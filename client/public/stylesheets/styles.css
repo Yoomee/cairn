@@ -3978,6 +3978,10 @@ a.backto {
 
 
 }
+a.edit_snippet_link, #footer a.edit_snippet_link{
+  color:#EE2374;
+  font-style:normal;
+}
 .corner_container {
 	position: relative;
 	display: block;
