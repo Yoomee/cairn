@@ -67,7 +67,7 @@
         #subnav_row.row
           -if controller_name == 'sections' && current_section
             =render_subnav(current_section.parent)
-          -else
+          -elsif controller_name != "tags"
             =render_subnav
             
       #main.content
