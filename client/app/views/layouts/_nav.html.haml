@@ -2,5 +2,5 @@
   %ul
     %li#nav_link_1
       =link_to "Home", "/"
-    -Section.root.each do |section|
+    -Section.root.not_hidden.each do |section|
       =li_with_active(current_root_section?(section), link_to_self(section))
