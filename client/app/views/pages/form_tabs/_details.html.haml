@@ -17,3 +17,4 @@
     %li.text
       =text_field_tag :tags_text, "", :onkeypress => "return event.keyCode!=13"
     %li=fields.photo_browser_button :photo
+    =fields.input :photo_text, :label => "Photo title <span>(If left blank, the page title will be used)</span>"
