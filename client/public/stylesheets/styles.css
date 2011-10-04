@@ -1643,8 +1643,8 @@ div#overflow_subnav a {
 
 div#overflow_next a {
 	background-image: url(/images/overflow_next.png);
-	background-repeat: no-repeat;
-	background-position: 50px 6px;
+  background-repeat: no-repeat;
+  background-position: 95% 48%;
 	position: absolute;
 	top: 20px;
 	right: 0;
@@ -1653,7 +1653,7 @@ div#overflow_next a {
 div#overflow_previous a {
 	background-image: url(/images/overflow_previous.png);
 	background-repeat: no-repeat;
-	background-position: 8px 6px;
+  background-position: 5% 48%;
 	position: absolute;
 	top: 20px;
 	left: 0;

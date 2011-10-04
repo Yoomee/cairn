@@ -6,8 +6,8 @@
 
 #overflow_subnav
   #overflow_previous
-    =link_to("Previous", pre, :title => pre) if pre
+    =link_to("Previous #{parent.page_type_name.try(:downcase)}".strip, pre, :title => pre) if pre
   #overflow_all
     =link_to("All", parent, :title => parent)
   #overflow_next
-    =link_to("Next", nxt, :title => nxt) if nxt
+    =link_to("Next #{parent.page_type_name.try(:downcase)}".strip, nxt, :title => nxt) if nxt
