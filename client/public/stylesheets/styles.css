@@ -1699,9 +1699,6 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 	color: #fff;
 	padding: 50px 0 0 0;
 	width: 955px;
-	
-	
-	
 }
 
 #big_message_image {
@@ -1709,18 +1706,16 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 	height: 280px;
 	float: right;
 	padding: 0;
-	
-	
-     -moz-border-radius-bottomright:10px;
-     -webkit-border-bottom-right-radius:10px;
-     border-bottom-right-radius:10px;
-
-	
+  -moz-border-radius-bottomright:10px;
+  -webkit-border-bottom-right-radius:10px;
+  border-bottom-right-radius:10px;
 }
 #big_message_left {
 	float: left;
 	padding: 20px 0 0 30px;
 	width: 360px;
+	position: relative;
+	height: 260px;
 }
 #big_message_left p {
 	font-family: georgia, serif;
@@ -1730,7 +1725,26 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 }
 #big_message_left h2 {
 	color: #fff;
-
+}
+#big_message_left .big_message_info {
+  display:none;
+}
+#big_message_nav {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+}
+#big_message_nav a {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+#big_message_nav a:hover {
+  text-decoration: none;
+	color: rgba(255,255,255,0.7);  
+}
+#big_message_prev {
+  margin-right: 15px;
 }
 #home_index_row {
 	overflow: visible;
