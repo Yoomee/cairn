@@ -21,11 +21,11 @@
     #footer_links.sixcol
       %ul
         %li
-          =link_to("Site map", "/sections")       
+          =link_to("Site map", "/sections")
         %li
-          =link_to(" Terms and conditions", "#")
+          =link_to_slug(" Terms and conditions", :terms)
         %li
-          =link_to("Company information", "#")
+          =link_to_slug("Company information", :contact)
 
         -unless logged_in?  
           %li
