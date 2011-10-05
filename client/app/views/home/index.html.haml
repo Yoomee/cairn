@@ -31,7 +31,7 @@
             =link_to(">", "#", :id => "big_message_next")
       #big_message_image.sevencol.last
         -@slideshow.slideshow_items.each_with_index do |slideshow_item, index|
-          =photo_for(slideshow_item, "535x280", "data-slide-num" => index)
+          =photo_for(slideshow_item, "535x280#", "data-slide-num" => index)
   #home_box_2.home_box.fourcol.corner_container
     -if ie?
       .c1.corner
