@@ -1,0 +1,20 @@
+-show_image_input = !slideshow_item.errors[:photo].blank? || (slideshow_item.errors[:video_url].blank? && slideshow_item.photo)
+-show_video_input = !show_image_input && (!slideshow_item.video_url.blank? || !slideshow_item.errors[:video_url].blank?)
+-slideshow_form.semantic_fields_for(:slideshow_items, slideshow_item) do |item_form|
+  -item_form.inputs(:class => "slideshow_item_form", :syle => "display:#{slideshow_item.marked_for_destruction? ? 'none' : 'block'}") do
+    %ol.image_or_video
+      -if !slideshow_item.errors.on(:base).blank?
+        %li
+          %p.slideshow_item_errors=slideshow_item.errors.on(:base)          
+      %ol.image_input_container
+        %li
+          =item_form.label :photo, "Image"
+          =item_form.photo_browser_button :photo
+        =item_form.input :delete_photo, :as => :hidden, :input_html => {:class => "delete_image_input"}
+    =item_form.input :text, :as => :ck_text, :label => "Description", :input_html => {:height => 100, :width => 480}, :wrapper_html => {:class => "slideshow_item_description"}
+    %li.draggable_position
+      =image_tag("drag_icon.png", :class => "drag_icon")
+      %span Drag me      
+    =item_form.input :position, :as => :hidden, :input_html => {:class => "position_input"}
+    =item_form.input :_destroy, :as => :hidden, :input_html => {:class => "destroy_slideshow_item"}
+    %li.delete_slide_link=link_to_function("x Delete slide", "SlideshowForm.deleteSlide($(this))")
