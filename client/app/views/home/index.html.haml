@@ -29,6 +29,7 @@
           #big_message_nav
             =link_to("<", "#", :id => "big_message_prev")
             =link_to(">", "#", :id => "big_message_next")
+        =link_if_allowed("Edit slideshow", edit_slideshow_proc(@slideshow), :id => "edit_slideshow_link")
       #big_message_image.sevencol.last
         -@slideshow.slideshow_items.each_with_index do |slideshow_item, index|
           =photo_for(slideshow_item, "535x280#", "data-slide-num" => index)

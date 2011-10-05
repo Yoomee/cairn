@@ -1767,6 +1767,11 @@ div.home_bx .bx_h, div.home_bx .bx_in {
   margin-right: 0px;
   background: url(/images/previous.png) no-repeat 0 0;
 }
+#edit_slideshow_link {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
 #home_index_row {
 	overflow: visible;
 	position: relative;
