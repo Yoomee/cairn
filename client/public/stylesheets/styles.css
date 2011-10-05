@@ -50,6 +50,7 @@ span.click_here_beta, p.club_welcome_intro_text {
 }
 #page_left_col, #page_right_col, p.index_text, p.blog_like_news_text {
 	color: #555;
+	font-size: 13px;
 }
 
 #page_content, #article_image, #keep_in_touch, #newsletter_signup, #pull_quote, #call_to_action {
@@ -1611,8 +1612,17 @@ ul.subnav li a {
 	margin: 10px 0 0;
 	border-top: 1px solid #ccc;
 }
+#subnav_1.last {
+	border: none;
+	padding: 0;
+	margin: -10px 0 0 0;
+}
+#subnav_1.last li a {
+	color: #ee2374;
+}
 #subnav_2 {
 	margin: 0;
+	border: none;
 }
 
 div#overflow_subnav {
@@ -1738,19 +1748,24 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 #big_message_nav {
   position: absolute;
   bottom: 10px;
-  right: 0px;
+  left: 30px;
+  width: 100px;
 }
 #big_message_nav a {
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
+	text-indent: -9000em;
+	width: 30px;
+	height: 30px;
+  display: block;
+  float: left;
+  background: url(/images/next.png) no-repeat 0 0;
 }
 #big_message_nav a:hover {
   text-decoration: none;
 	color: rgba(255,255,255,0.7);  
 }
-#big_message_prev {
-  margin-right: 15px;
+#big_message_nav a#big_message_prev {
+  margin-right: 0px;
+  background: url(/images/previous.png) no-repeat 0 0;
 }
 #home_index_row {
 	overflow: visible;
@@ -2720,11 +2735,11 @@ span#iso_label {
 	display: block;
 	position: absolute;
 	
-	width: 91px;
-	height: 60px;
-	background: url(/images/iso.png) no-repeat 0 0;
-	right: 155px;
-	bottom: 30px;
+	width: 131px;
+	height: 105px;
+	background: url(/images/iso2.png) no-repeat 0 0;
+	right: 110px;
+	bottom: 10px;
 }
 div#footer.container {
 	background: #dadde0;
@@ -6743,14 +6758,19 @@ input#as-input-themes {
 }
 .product {
 	float: left;
-	clear: both;
-	width: 100%;
+
 	padding: 15px 0;
-	margin: 0 0 0 15px;
-	border-bottom: 1px solid #dee2e6;
+	margin: 0 15px 0 0px;
+	min-height: 330px;
 }
 .product h3 {
-	margin: 0 0 4px;
+	margin: 6px 0 4px;
+	float: left;
+	font-size: 14px;
+	
+}
+.product, .product h3, .product .text, div.product_container {
+	width: 190px;
 }
 .product h3 a {
 	color: #425563;
@@ -6760,11 +6780,17 @@ input#as-input-themes {
 }
 .product .text {
 	float: left;
-	width: 460px;
+	font-size: 13px;
+
+}
+div.product_container {
+	height: 130px;
+
+
 }
 a.item_img {
 	display: block;
-	float: right;
+	float: left;
 
 	
 }
