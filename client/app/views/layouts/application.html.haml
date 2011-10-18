@@ -54,14 +54,19 @@
       #header.container
         =render :partial => 'layouts/header'
       #subheader.container
-        #nav_line.row
+        #nav_line.row.corner_container
+          .c1.corner        
+          .c2.corner
+          -if !is_home?
+            .c3.corner        
+            .c4.corner
           .ninecol
             =render("layouts/nav")
           #search_box.threecol.last
             -unless controller_name == 'search'
               -form_for Search.new do |form|
-                =form.submit "Search", :id => "search_icon"  
-                =form.text_field :term, :title => ""      , :class => "labelify", :id => "search_field" 
+                =form.submit "Search", :id => "search_icon"
+                =form.text_field :term, :title => "", :class => "labelify", :id => "search_field"
           %br.clear        
                 
         #subnav_row.row

@@ -1,42 +1,68 @@
 -content_for :head do
   :javascript
     $(document).ready(function(){
-      $('.cycle').cycle({
+      $('#big_message_image').cycle({
         fx: 'scrollHorz',
         speed: 'slow',
         timeout: 8000,
         easing: 'easeOutQuint',
-        pager: '.cycle_nav',
-        next: '.cycle_next',
-        prev: '.cycle_prev'
+        prev: '#big_message_prev',
+        next: '#big_message_next',
+        before: function(currSlideElement, nextSlideElement, options, forwardFlag) {
+          var slideNum = $(nextSlideElement).attr("data-slide-num");
+          $(".big_message_info").hide();
+          $("#big_message_" + slideNum).fadeIn();
+        }
       });
+      #{'$(".big_message_info").show();'if @slideshow.slideshow_items.size == 1}
     });
 -no_content_row 
 -hide_page_title
 #home_index_row.row
-  #big_message    
-    #big_message_left.fivecol
-      %h2
-        Welcome to Cairn
-      %p
-        In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. 
-        =# link_to 'More about us here', {:controller => 'page', :action => 'show', :id => '2'}, :class => 'read_more'
-    #big_message_image.sevencol.last
-  #home_box_2.home_box.fourcol
+  -if !@slideshow.slideshow_items.empty?
+    #big_message    
+      #big_message_left.fivecol
+        -@slideshow.slideshow_items.each_with_index do |slideshow_item, index|
+          .big_message_info{:id => "big_message_#{index}"}
+            =slideshow_item.text
+        -if @slideshow.slideshow_items.size > 1
+          #big_message_nav
+            =link_to("<", "#", :id => "big_message_prev")
+            =link_to(">", "#", :id => "big_message_next")
+        =link_if_allowed("Edit slideshow", edit_slideshow_proc(@slideshow), :id => "edit_slideshow_link")
+      #big_message_image.sevencol.last
+        -@slideshow.slideshow_items.each_with_index do |slideshow_item, index|
+          =photo_for(slideshow_item, "535x280#", "data-slide-num" => index)
+  #home_box_2.home_box.fourcol.corner_container
+    -if ie?
+      .c1.corner
+      .c2.corner
+      .c3.corner
+      .c4.corner
     .home_box_image
       =link_to_slug("hospitals", :hospitals, :class=>"home_box_image_link")  
     %h2.home_box_title Interested in hospitals
     %p.home_box_text
       =strip_tags(Section.find_by_slug(:hospitals).try(:description))
     =link_to_slug("More", :hospitals, :class=>"home_box_link")      
-  #home_box_1.home_box.fourcol
+  #home_box_1.home_box.fourcol.corner_container
+    -if ie?  
+      .c1.corner
+      .c2.corner
+      .c3.corner
+      .c4.corner
     .home_box_image
       =link_to_slug("Care Homes", :care_homes, :class=>"home_box_image_link")
     %h2.home_box_title Interested in care homes
     %p.home_box_text
       =strip_tags(Section.find_by_slug(:care_homes).try(:description))
     =link_to_slug("More", :care_homes, :class=>"home_box_link")
-  #home_box_3.home_box.fourcol.last
+  #home_box_3.home_box.fourcol.last.corner_container
+    -if ie?
+      .c1.corner
+      .c2.corner
+      .c3.corner
+      .c4.corner
     .home_box_image
       =link_to_slug("other_industries", :other_industries, :class=>"home_box_image_link")
     %h2.home_box_title Other industries

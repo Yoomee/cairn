@@ -28,10 +28,15 @@
     #latestStoriesList
       -@pages_sections.each do |page_section|
         .item.product{:class => page_section.tags.collect{|t| "dep_#{t.to_s.downcase.fully_underscore}"}.join(' ')}
+          .product_container.corner_container
+            .c1.corner
+            .c2.corner
+            .c3.corner
+            .c4.corner
+            =link_to(photo_for(page_section, "190x130#"), page_section, :class => 'item_img')
           .text
             %h3=link_to page_section, page_section
-            %p=strip_tags description_for(page_section, :length => 230)
-          =link_to(photo_for(page_section, "140x140#"), page_section, :class => 'item_img')
+            %p=strip_tags description_for(page_section, :length => 140)          
           =link_to 'More', page_section, :class => 'bttn'
           
 .row
