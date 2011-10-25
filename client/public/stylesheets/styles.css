@@ -4097,8 +4097,9 @@ a.edit_snippet_link, #footer a.edit_snippet_link{
 	text-indent: 0;
 	font-size: 14px;
 	padding: 0 0 0 0;
-	
 	min-height: 45px;
+	font-family: georgia, serif;
+	font-style:italic;
 }
 .pull_quote * {
 
