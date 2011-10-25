@@ -7138,3 +7138,20 @@ div.slideshow {
 #slideshow_row {
   margin-bottom: 20px;
 }
+
+/*========== Photo Gallery ==========*/
+
+.photo_gallery_row .photo {
+  float: left;
+  width: 180px;
+  text-align: center;  
+  overflow: hidden;
+}
+.photo_gallery_row .photo .photo_name {
+  text-align: left;  
+  font-weight: bold;
+  margin: 0;
+}
+.photo_gallery_row .photo .photo_description {
+  text-align: left;
+}
