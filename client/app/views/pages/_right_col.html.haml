@@ -19,13 +19,14 @@
         -else
           =render 'documents/document', :document => document
       =link_to_function("&darr; Show all", "$('.hidden_doc_wrapper').show();$(this).hide()", :class => "show_documents_link") if page.related_documents.size > 3
-  .page_share
-    %h2 Share this
-    #twitter_link.share_button
-      =link_to "Tweet", "http://twitter.com/share", :class=>"twitter-share-button", :data_count=>"horizontal", :data_via=>"yoomeehq"
-      =javascript_include_tag 'http://platform.twitter.com/widgets.js'
-    #facebook_link.share_button  
-      =facebook_like_link        
+  -if !page.root_section.hidden?
+    .page_share
+      %h2 Share this
+      #twitter_link.share_button
+        =link_to "Tweet", "http://twitter.com/share", :class=>"twitter-share-button", :data_count=>"horizontal", :data_via=>"yoomeehq"
+        =javascript_include_tag 'http://platform.twitter.com/widgets.js'
+      #facebook_link.share_button  
+        =facebook_like_link        
       
 -if false  
   %h2 Share

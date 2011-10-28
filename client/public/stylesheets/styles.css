@@ -181,7 +181,7 @@ html body .no_padding {
 
 #right_company_info {
 	float: right;
-	width: 300px;
+	width: 310px;
 	margin: 30px 0px 0 0;
 	
 }
@@ -1591,7 +1591,7 @@ ul.subnav li.active a {
 	margin: -9px 0 20px 0;
 	float: left;
 	width: 895px;
-	background:#DEE2E6;
+	background:url(/images/subnav_0.png) no-repeat bottom left;
 }
 ul.subnav li a {
 	display:block;
@@ -1717,11 +1717,16 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 #big_message_image {
 /*  background: url(/images/big_message_slide.jpg) no-repeat bottom right;*/
 	height: 280px;
+	width: 530px;
 	float: right;
 	padding: 0;
   -moz-border-radius-bottomright:10px;
   -webkit-border-bottom-right-radius:10px;
   border-bottom-right-radius:10px;
+}
+#big_message_image img {
+	height: 280px;
+		width: 530px;
 }
 #big_message_left {
 	float: left;
@@ -2082,7 +2087,19 @@ h5.article_intro {
 
 	
 }
+h5.italic_font_intro {
+	line-height: 150%;
+	font-size: 17px;
+	font-weight: normal;
+	font-style: italic;
+	color: #555;
+	font-family: georgia, times, serif;
+}
 
+#page_left_col p.italic_font em {
+	font-family: georgia, times, serif;
+	
+}
 
 /* =================  cal icon and events list  =============== */
 #events {}
@@ -4438,9 +4455,7 @@ div.item_image_wrap {
 	border-bottom: 1px solid #dadde0;
 	padding: 10px 0 11px;
 }
-.doc:last-child {
-	border-bottom: none;
-}
+
 div.doc_icon {
 	float: left;
 	margin: 0 10px 0 0;
@@ -4468,13 +4483,13 @@ a.download_text {
 a.show_documents_link {
 	position: absolute;
 	bottom: -10px;
-	background: #BCC5C9;
+	background: #6e74b4;
 	display: block;
 	padding: 3px 13px;
 	font-weight: bold;
-	left: 160px;
+	left: 150px;
 	color: #fff;
-	font-size: 10px;
+	font-size: 13px;
 	
 	-moz-border-radius:20px;
 	-webkit-border-radius:20px;
@@ -6729,7 +6744,7 @@ input#as-input-themes {
 #departments_list_block {
 	min-height: 400px;
 
-	background: rgba(213, 219, 224, 0.4);
+	background: #eef1f3;
 }
 
 
