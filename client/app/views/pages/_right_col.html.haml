@@ -8,7 +8,12 @@
       =photo_for(page, '450x')  
       =snippet(page, :photo_caption)
   =snippet(page, :pull_quote)  
-  =snippet(page, :call_to_action)    
+  #call_to_action_box.corner_container
+    .c1.corner
+    .c2.corner
+    .c3.corner
+    .c4.corner
+    =snippet(page, :call_to_action)
 
   -if page.has_related_items?(:included_types => %w{Document})
     .related_documents

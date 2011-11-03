@@ -1797,13 +1797,13 @@ body div.home_box_1, div.home_box_2 {
 	margin-right: 25px;
 }
 #home_box_1 .home_box_image {
-	background: url(/images/home_box_image_1.jpg);
+	background: url(/images/home_box_image_1b.jpg);
 }
 #home_box_2 .home_box_image {
-	background: url(/images/home_box_image_2.jpg);
+	background: url(/images/home_box_image_2b.jpg) no-repeat;
 }
 #home_box_3 .home_box_image {
-	background: url(/images/home_box_image_3.jpg);
+	background: url(/images/home_box_image_3b.jpg);
 }
 #home_box_1 {
 	background: #7170b3;
@@ -1874,7 +1874,7 @@ a.home_box_link {
 .home_box_image_link {
 	display: block;
 	float: left;
-	width: 100%;
+	width: 300px;
 	height: 100%;
 	text-indent: -9000em;
 }
@@ -4118,6 +4118,10 @@ a.edit_snippet_link, #footer a.edit_snippet_link{
 	font-family: georgia, serif;
 	font-style:italic;
 }
+.pull_quote strong {
+	 font-family: 'Droid sans', arial, serif;
+	 font-style: normal;
+}
 .pull_quote * {
 
 	padding:0;
@@ -4138,9 +4142,15 @@ a.edit_snippet_link, #footer a.edit_snippet_link{
 	padding-left:55px;
 	width:230px;
 }
+
+#call_to_action_box {
+	background: #009ba6;
+	margin: 30px 0 0;
+}
+
 .call_to_action {
 	padding: 15px;
-	margin: 30px 0 0;
+	
 
 	float: left;
 	font-size: 16px;
@@ -4148,11 +4158,8 @@ a.edit_snippet_link, #footer a.edit_snippet_link{
 	color: #fff;
 	
 	
-	background: #009ba6;
 	
-	box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px #009ba6;
-	-webkit-box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px #009ba6;
-	-moz-box-shadow: -3px 3px rgba(0,0,0,0.1), inset -2px 5px 12px #009ba6;
+
 
 
 }
