@@ -36,7 +36,7 @@
             =link_to(photo_for(page_section, "190x130#"), page_section, :class => 'item_img')
           .text
             %h3=link_to page_section, page_section
-            %p=strip_tags description_for(page_section, :length => 140)          
+            %p=truncate(strip_tags(page_section.text),140)
           =link_to 'More', page_section, :class => 'bttn'
           
 .row
