@@ -1712,10 +1712,10 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 }
 #big_message {
 	float: left;
-	margin: -43px 0 20px;
+	margin: 0px 0 20px;
 	background: #455562;
 	color: #fff;
-	padding: 50px 0 0 0;
+	padding: 0px 0 0 0;
 	width: 955px;
 }
 
@@ -4051,7 +4051,11 @@ a.edit_snippet_link, #footer a.edit_snippet_link{
 .corner_container * {
 	padding: 0;
 	margin: 0;
-	float: left;
+}
+
+p.italic_font {
+	font-style: italic;
+	font-family: georgia, serif;
 }
 .corner {
 	display: block;
@@ -4151,6 +4155,8 @@ a.edit_snippet_link, #footer a.edit_snippet_link{
 #call_to_action_box {
 	background: #009ba6;
 	margin: 30px 0 0;
+	float: left;
+	clear: both;
 }
 
 .call_to_action {
