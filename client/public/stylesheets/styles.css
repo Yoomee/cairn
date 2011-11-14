@@ -1370,7 +1370,7 @@ a#member_login_bttn.open, a#member_login_bttn.open:hover {
 	height: auto;
 	top: 60px;
 	padding: 10px;
-	right: 320px;
+	right: 340px;
 	display: none;
 	z-index: 100;
 	overflow:hidden;
@@ -4051,8 +4051,11 @@ a.edit_snippet_link, #footer a.edit_snippet_link{
 .corner_container * {
 	padding: 0;
 	margin: 0;
-}
 
+}
+.corner_container img {
+	float: left;
+}
 p.italic_font {
 	font-style: italic;
 	font-family: georgia, serif;
