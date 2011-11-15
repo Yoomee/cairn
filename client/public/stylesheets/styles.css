@@ -7002,6 +7002,12 @@ fieldset.box label{
 .formtastic .check_boxes ol li input, .formtastic .radio ol li input{
   margin-bottom:5px;
 }
+#enquiry_product_or_service_specifics_input label, #enquiry_more_info_specifics_input label{
+  display:none;
+}
+#enquiry_product_or_service_input, #enquiry_more_info_input{
+  margin-bottom:0;
+}
 
 /*========== Slideshow ==========*/
 
