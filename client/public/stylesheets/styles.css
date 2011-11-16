@@ -3108,6 +3108,7 @@ p.section_description {
 	right: 10px;
 }
 #index_view .index_left {
+  clear:left;
   margin-left: 0px;
 }
 .index_item p.blog_like_news_date {
