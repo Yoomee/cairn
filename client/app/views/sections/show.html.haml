@@ -27,6 +27,8 @@
           =page_section.is_a?(Page) ? (snippet(page_section, :summary).nil? ? truncate(page_section.text.strip_tags, :length => 183) : snippet(page_section, :summary, false).strip_tags) : page_section.description.to_s.strip_tags.word_truncate(183)
         =link_to "Read more", page_section, :class=>'section_read_more'
         %p.index_read_more
+    -if col_name == 'right'
+      %br.clear 
           
 .row
   .twelvecol      
