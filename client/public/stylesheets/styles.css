@@ -1717,11 +1717,17 @@ div.home_bx .bx_h, div.home_bx .bx_in {
 	color: #fff;
 	padding: 0px 0 0 0;
 	width: 955px;
+	
+	-moz-border-radius:0 0 10px 10px;
+	-webkit-border-radius:0 0 10px 10px;
+	border-radius:0 0 10px 10px;
+	-o-border-radius:0 0 10px 10px;	
 }
 
 #big_message_image {
 /*  background: url(/images/big_message_slide.jpg) no-repeat bottom right;*/
 	height: 280px;
+
 	width: 530px;
 	float: right;
 	padding: 0;
