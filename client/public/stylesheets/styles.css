@@ -1243,6 +1243,22 @@ h1#page_title {
 	margin:0;
 }
 
+p#contact_phone {
+	display: block;
+	position: absolute;
+	top: 40px;
+	left: 200px;
+	font-weight: bold;
+	color: #ee2374;
+	font-size: 17px;
+	line-height: 23px;
+	z-index: 200;
+}
+p#contact_phone a.edit_snippet_link {
+	font-size: 12px;
+	font-weight: normal;
+}
+
 #user_links .panel {
   float: right;
   font-weight: bold;
