@@ -1246,12 +1246,12 @@ h1#page_title {
 p#contact_phone {
 	display: block;
 	position: absolute;
-	top: 40px;
-	left: 200px;
+	top: 30px;
+	right: 390px;
 	font-weight: bold;
-	color: #ee2374;
-	font-size: 17px;
-	line-height: 23px;
+	color: #455562;
+	font-size: 16px;
+	line-height: 25px;
 	z-index: 200;
 }
 p#contact_phone a.edit_snippet_link {
@@ -1288,7 +1288,7 @@ div.logged_in_panel {
 .logged_in_as {
   float: right;
 
-  margin: 30px 30px 0 0;
+  margin: 70px 30px 0 0;
 
 
 }
@@ -1384,7 +1384,7 @@ a#member_login_bttn.open, a#member_login_bttn.open:hover {
 	color: #fff;
 	width: 160px;
 	height: auto;
-	top: 60px;
+	top: 100px;
 	padding: 10px;
 	right: 340px;
 	display: none;
