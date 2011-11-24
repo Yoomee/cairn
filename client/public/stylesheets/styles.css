@@ -1246,9 +1246,9 @@ h1#page_title {
 p#contact_phone {
 	display: block;
 	position: absolute;
-	top: 31px;
-	right: 405px;
-	font-weight: bold;
+	top: 32px;
+	right: 380px;
+	font-weight: ;
 	color: #ee2374;
 	font-size: 20px;
 	line-height: 25px;
