@@ -23,7 +23,7 @@
           .hidden_doc_wrapper=render 'documents/document', :document => document
         -else
           =render 'documents/document', :document => document
-      =link_to_function("&darr; Show all", "$('.hidden_doc_wrapper').show();$(this).hide()", :class => "show_documents_link") if page.related_documents.size > 3
+      =link_to_function("&darr; Show all <span class='overflow_right'></span>", "$('.hidden_doc_wrapper').show();$(this).hide()", :class => "show_documents_link") if page.related_documents.size > 3
   -if !page.root_section.hidden?
     .page_share
       %h2 Share this
