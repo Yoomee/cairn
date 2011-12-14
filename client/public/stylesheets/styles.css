@@ -19,14 +19,14 @@ body, textarea, input {font:12px/1.6 'Droid sans', Arial,'Liberation Sans',FreeS
 
 /* ======================  CSS3 regularly used stuff ================== */
 
-#main, input, #footer_links, .bx_h, #news_feed_older_btn, .bx_h a, button, .bttn, .pull_quote, div#page_related_col, a.backto, .logged_in_box, .homepage_link, .pagination a, .pagination span, #big_message, .home_box, .call_to_action, #subnav_0, div.page_share, #departments_list_block  {
+#main, input, #footer_links, .bx_h, #news_feed_older_btn, .bx_h a, button, .bttn, .pull_quote, div#page_related_col, a.backto, .logged_in_box, .homepage_link, .pagination a, .pagination span, #big_message, .home_box, .call_to_action, #subnav_0, #departments_list_block  {
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
 	-o-border-radius:10px;	
 }
 
-#big_message, .home_box, .page_share {
+#big_message, .home_box {
 	box-shadow: -3px 3px rgba(0,0,0,0.1);
 	-webkit-box-shadow: -3px 3px rgba(0,0,0,0.1);
 	-moz-box-shadow: -3px 3px rgba(0,0,0,0.1);
@@ -1243,6 +1243,22 @@ h1#page_title {
 	margin:0;
 }
 
+p#contact_phone {
+	display: block;
+	position: absolute;
+	top: 32px;
+	right: 410px;
+	font-weight: ;
+	color: #ee2374;
+	font-size: 20px;
+	line-height: 25px;
+	z-index: 200;
+}
+p#contact_phone a.edit_snippet_link {
+	font-size: 12px;
+	font-weight: normal;
+}
+
 #user_links .panel {
   float: right;
   font-weight: bold;
@@ -1272,7 +1288,7 @@ div.logged_in_panel {
 .logged_in_as {
   float: right;
 
-  margin: 30px 30px 0 0;
+  margin: 70px 30px 0 0;
 
 
 }
@@ -1368,7 +1384,7 @@ a#member_login_bttn.open, a#member_login_bttn.open:hover {
 	color: #fff;
 	width: 160px;
 	height: auto;
-	top: 60px;
+	top: 100px;
 	padding: 10px;
 	right: 340px;
 	display: none;
@@ -1650,7 +1666,7 @@ div#overflow_subnav a span.overflow_left {
 	height: 20px;
 	background: #6e74b4 url(/images/overflow_left.png) no-repeat top left;
 }
-div#overflow_subnav a span.overflow_right {
+a span.overflow_right {
 	display: block;
 	padding: 4px 0px;
 	width: 12px;
@@ -4233,20 +4249,30 @@ div.article_image {
 }
 
 div.page_share {
-	padding: 15px 15px 10px;
+	padding: 15px 15px 20px;
 	margin: 30px 0 0;
 
 	float: left;
 	font-size: 16px;
-	width: 120px;
+	width: 124px;
 	color: #fff;
+	position: relative;
 
-	background: #f2f4f6;
+	background: url(/images/share_box.png) 0 0 no-repeat;
 	
 	
 
 
 	
+}
+.share_box_bottom {
+	background: url(/images/share_box.png) no-repeat bottom left;
+	float: left;
+	width: 155px;
+	height: 13px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 .share_button {
 	float: left;
@@ -4520,10 +4546,12 @@ a.show_documents_link {
 	color: #fff;
 	font-size: 13px;
 	
-	-moz-border-radius:20px;
-	-webkit-border-radius:20px;
-	border-radius:20px;
-	-o-border-radius:20px;
+
+	padding: 4px 16px 4px 16px;
+	float: left;
+	display: block;
+	height: 20px;
+	background: #6e74b4 url(/images/overflow_left.png) no-repeat top left;
 
 	
 }
