@@ -2,12 +2,16 @@
 %html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
   %head
     %title
-      = page_title
-      =":"
-      = site_name
-      =":"
-      Partnership Innovation Excellence
+      -if is_home?
+        Infection Control Products | Infection Control Training | Cairn
+      -else
+        = page_title
+        =":"
+        = site_name
+        =":"
+        Partnership Innovation Excellence
     %meta{ :name => "Generator", :content => "Yoomee (Ruby on Rails)" }
+    %meta{:name => 'Description', :content => 'Cairn Technology is a health, safety & environmental consultancy supplying infection control products and infection control training to hospitals and care homes.'}
     %meta{ :name => "robots", :content => "index, follow" }
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
     %meta{ :name => "info", :content => "#{page_title}#{page_subtitle}" }
