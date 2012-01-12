@@ -4,3 +4,8 @@ development:
 production:
   min_prefix_len: 1
   port: 9316
+  config_file: /data/cairn/shared/production.sphinx.conf
+  searchd_file_path: /data/cairn/shared/sphinx
+  searchd_log_path: /data/cairn/shared/searchd.log
+  query_log_file: /data/cairn/shared/searchd.query.log
+  pid_file: /data/cairn/shared/searchd.production.pid

@@ -8,7 +8,12 @@
       =photo_for(page, '450x')  
       =snippet(page, :photo_caption)
   =snippet(page, :pull_quote)  
-  =snippet(page, :call_to_action)    
+  #call_to_action_box.corner_container
+    .c1.corner
+    .c2.corner
+    .c3.corner
+    .c4.corner
+    =snippet(page, :call_to_action)
 
   -if page.has_related_items?(:included_types => %w{Document})
     .related_documents
@@ -18,14 +23,16 @@
           .hidden_doc_wrapper=render 'documents/document', :document => document
         -else
           =render 'documents/document', :document => document
-      =link_to_function("&darr; Show all", "$('.hidden_doc_wrapper').show();$(this).hide()", :class => "show_documents_link") if page.related_documents.size > 3
-  .page_share
-    %h2 Share this
-    #twitter_link.share_button
-      =link_to "Tweet", "http://twitter.com/share", :class=>"twitter-share-button", :data_count=>"horizontal", :data_via=>"yoomeehq"
-      =javascript_include_tag 'http://platform.twitter.com/widgets.js'
-    #facebook_link.share_button  
-      =facebook_like_link        
+      =link_to_function("&darr; Show all <span class='overflow_right'></span>", "$('.hidden_doc_wrapper').show();$(this).hide()", :class => "show_documents_link") if page.related_documents.size > 3
+  -if !page.root_section.hidden?
+    .page_share
+      %h2 Share this
+      #twitter_link.share_button
+        =link_to "Tweet", "http://twitter.com/share", :class=>"twitter-share-button", :data_count=>"horizontal", :data_via=>"yoomeehq"
+        =javascript_include_tag 'http://platform.twitter.com/widgets.js'
+      #facebook_link.share_button  
+        =facebook_like_link        
+      .share_box_bottom  
       
 -if false  
   %h2 Share

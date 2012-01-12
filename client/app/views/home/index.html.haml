@@ -41,7 +41,7 @@
       .c4.corner
     .home_box_image
       =link_to_slug("hospitals", :hospitals, :class=>"home_box_image_link")  
-    %h2.home_box_title Interested in hospitals
+    %h2.home_box_title=Section.slug("hospitals").name
     %p.home_box_text
       =strip_tags(Section.find_by_slug(:hospitals).try(:description))
     =link_to_slug("More", :hospitals, :class=>"home_box_link")      
@@ -53,7 +53,7 @@
       .c4.corner
     .home_box_image
       =link_to_slug("Care Homes", :care_homes, :class=>"home_box_image_link")
-    %h2.home_box_title Interested in care homes
+    %h2.home_box_title=Section.slug('care_homes').name
     %p.home_box_text
       =strip_tags(Section.find_by_slug(:care_homes).try(:description))
     =link_to_slug("More", :care_homes, :class=>"home_box_link")
@@ -65,7 +65,7 @@
       .c4.corner
     .home_box_image
       =link_to_slug("other_industries", :other_industries, :class=>"home_box_image_link")
-    %h2.home_box_title Other industries
+    %h2.home_box_title=Section.slug('other_industries').name
     %p.home_box_text
       =strip_tags(Section.find_by_slug(:other_industries).try(:description))
     =link_to_slug("More", :other_industries, :class=>"home_box_link")  

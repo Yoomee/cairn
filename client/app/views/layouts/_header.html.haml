@@ -6,8 +6,12 @@
       %h1#site_logo
         =link_to "#{site_name}", root_path, :id=>"site_logo_link"
     -else
-      =link_to "#{site_name}", root_path, :id=>"site_logo_link"  
-  #header_right.ninecol.last.no_padding 
+      =link_to "#{site_name}", root_path, :id=>"site_logo_link"
+  #header_right.ninecol.last.no_padding
+    %p#contact_phone
+      Contact Us:
+      =strip_tags(site_snippet(:contact_phone))
+      =link_if_allowed('Edit', edit_snippet_proc(Snippet.site_snippet(:contact_phone)), :class => 'edit_snippet_link')
     #right_company_info
       %h2 Partnership Innovation Excellence
       %p

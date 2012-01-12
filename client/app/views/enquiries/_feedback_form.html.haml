@@ -1,3 +1,41 @@
+-content_for :head do
+  :coffeescript
+    $ ->
+      FeedbackForm.updateMoreInfoSpecifics()
+      FeedbackForm.updateProductOrServiceSpecifics()
+      $('#enquiry_more_info_input input').click ->
+        FeedbackForm.updateMoreInfoSpecifics()
+      $('#enquiry_product_or_service_input input').click ->
+        FeedbackForm.updateProductOrServiceSpecifics()
+
+    FeedbackForm = 
+
+      anySpecificsChecked: (elmnt) -> 
+        specify = false
+        console.log(elmnt)
+        $(elmnt).find('input:checked').each (idx, item) =>
+          console.log(item)
+          if $(item).val().match /please specify/
+            specify = true
+        console.log specify
+        specify
+
+      updateMoreInfoSpecifics: ->
+        specificsFld = $('#enquiry_more_info_specifics')
+        if this.anySpecificsChecked $('#enquiry_more_info_input')
+          specificsFld.show()
+        else
+          specificsFld.hide()
+          specificsFld.val ''
+
+      updateProductOrServiceSpecifics: ->
+        specificsFld = $('#enquiry_product_or_service_specifics')
+        if this.anySpecificsChecked $('#enquiry_product_or_service_input')
+          specificsFld.show()
+        else
+          specificsFld.hide()
+          specificsFld.val ''
+
 %p.help
   We're always seeking to improve the quality of our products and our customer service, and we value your views and opinions. Your feedback would be very much appreciated. Please take a few minutes to complete this form and click 'submit.'
 
@@ -5,14 +43,18 @@
   =form.input :name, :label => "Full Name"
   =form.input :job_title, :label => "Job title"
   =form.input :department, :label => "Department"
-  =form.input :hospital_or_company, :label => "Hospital/Company"
+  =form.input :hospital_care_home_or_company, :label => "Hospital/Care Home/Company"
   =form.input :address, :label => "Address", :as => :text, :input_html => {:rows => 3}
   =form.input :post_code, :label => "Post code"
   =form.input :email, :label => "Email address"
   =form.input :contact_preference, :label => "How would you prefer to be contacted?", :as => :check_boxes, :collection => ["E-mail","Phone","Post","No preference"]
   
 -form.inputs "About Our Product or Service", :class => "box" do
-  =form.input :product_or_service, :label => "Which product or service have you recently bought from us?", :as => :check_boxes, :include_other => true, :collection => ["Consumables", "Disposable Mops", "Microb-in", "Operating Room Spillage System", "Respirators", "Spill Station", "T-mat/T-mat Sterile", "Virusan/Virusan AS", "Virusolve+", "Bio-burden Testing", "Emissions Testing for Washer Disinfectors", "Sterile Services Clean Room Testing", "Workplace Exposure Monitoring", "Training"]
+
+  =form.input :product_or_service, :label => "Which product or service have you recently bought from us?", :as => :check_boxes, :collection => FeedbackForm::PRODUCTS
+  =form.input :product_or_service_specifics, :label => '&nbsp;'
+
+
   =form.input :how_pleased_are_you, :label => "How pleased with the product or service are you?", :as => :radio, :collection => ["Very pleased","Pleased","Satisfied","Disappointed"]
   =form.input :value_for_money, :label => "How would you rate it for value for money?", :as => :radio, :collection => ["Excellent","Good","Average","Poor"]
   =form.input :how_did_you_find_out, :label => "How did you find out about this particular Cairn Technology product or service?", :as => :check_boxes, :include_other => true, :collection => ["Email newsletter", "Internet search", "Marketing letter", "Phone call from Cairn Technology Account Manager", "Trade magazine", "Word of mouth"]
@@ -21,7 +63,7 @@
   =form.input :which_one, :label => "If yes, which one?"
   =form.input :how_likely_to_buy_again, :label => "How likely are you to buy the product or service from us again?", :as => :radio, :collection => ["Very likely", "Likely", "Unlikely", "Not at all"]
   =form.input :would_you_recommend, :label => "Would you recommend it to others?", :as => :radio, :collection => ["Yes", "No"]
-  =form.input :recommendation_quote, :label => "If yes, would you be willing to provide us with a quote we can use in our marketing literature? Please write what you would like to say in the box below.", :as => :text, :input_html => {:rows => 3}
+  =form.input :recommendation_quote, :label => "If yes, would you be willing to provide us with a quote we can use in our marketing literature? Please type what you would like to say in the box below.", :as => :text, :input_html => {:rows => 3}
   =form.input :improvements, :label => "Would you like to suggest any changes or improvements we could make?", :as => :text, :input_html => {:rows => 3}
   
 -form.inputs "Customer service", :class => "box" do
@@ -38,5 +80,6 @@
   =form.input :how_pleased, :label => "Overall, how pleased were you with Cairn Technology?", :as => :radio, :collection => ["Very pleased","Pleased","Satisfied","Disappointed"]
   =form.input :willing_to_case_study, :label => "Would you be willing to provide us with a Case Study for marketing literature?", :as => :radio, :collection => ["Yes", "No"]
   =form.input :how_complete, :label => "If yes, how would you like to complete it?", :as => :radio, :collection => ["Phone", "Post"]
-  =form.input :more_info, :label => "Would you like any information on the following Cairn Technology products and services?", :as => :check_boxes, :include_other => true, :collection => ["Bio-burden Testing","Chemical Spill Stations","Chemical Training Course","Consumables","Cytotoxic Drug Spill Station","Emissions Testing for Washer Disinfectors","Endotoxin Testing","Laboratory Spill Stations","Microb-in","MLAF Unit Testing","Operating Room Spillage System","Sterile Services Clean Room Testing","T-mat & T-mat Sterile, super absorbents mat for theatres","Virusan & Virusan AS, antimicrobial skin sanitizer & scrub","Virusolve+, highly effective cleaner & disinfectant","Workpace Exposure Monitoring"]
+  =form.input :more_info, :label => "Would you like any information on the following Cairn Technology products and services?", :as => :check_boxes, :collection => FeedbackForm::PRODUCTS, :label => '&nbsp;'
+  =form.input :more_info_specifics
   =form.input :dont_contact_in_future, :label => "If you would prefer not to be contacted by Cairn Technology in the future, please tick this box.", :as => :boolean
