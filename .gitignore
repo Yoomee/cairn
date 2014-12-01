@@ -1,17 +1,9 @@
-/app
-/config
-/db
-/lib
 /log
 /public
 /script
 /test
 /tmp
-/vendor
-/vendor/plugins/tramlines_walls
-/vendor/plugins/tramlines_events
 /vendor/plugins/event_calendar
 /vendor/plugins/facebooker
 .DS_Store
 /uploads
-/vendor/plugins/tramlines_slideshows
